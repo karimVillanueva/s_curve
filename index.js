@@ -3,7 +3,7 @@ import bodyParser from 'body-parser'
 import { App }  from './app.mjs' 
 
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const port = process.env.PORT || 8080;
 const jsonParser = bodyParser.json()
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -25,6 +25,6 @@ app.post('/data', jsonParser, function (req, res) {
   })
 })
 
-app.listen(PORT, () => {
-  console.log(`Api endpoint listening on port ${PORT}`)
+app.listen(port, () => {
+  console.log(`Api endpoint listening on port ${port}`)
 })
