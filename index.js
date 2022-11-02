@@ -21,7 +21,8 @@ app.post('/data', jsonParser, function (req, res) {
   res.send({
     "Respuesta": "Curva Generada",
     "acc": app[0],
-    "ideal": app[1]
+    "ideal": app[1],
+    "id": app[2]
   })
 })
 
