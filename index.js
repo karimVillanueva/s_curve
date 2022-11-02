@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 // Post 
 app.post('/data', jsonParser, function (req, res) {
   let app = App(req.body.monto,req.body.duracion,req.body.id);
-  console.log(app)
   res.send({
     "Respuesta": "Curva Generada",
     "acc": app[0],

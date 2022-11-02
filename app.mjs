@@ -19,7 +19,7 @@ export function App(monto,duracion,id) {
     period = createPeriods(duracion);
     ideal = idealCurve(period,curva,monto,duracion);
     s_Curve = s_curve(ideal);
-    return [s_Curve, ideal,id];
+    return [s_Curve, ideal, id];
 }
 
 
