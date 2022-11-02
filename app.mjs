@@ -12,17 +12,14 @@ let period;
 let ideal;
 let s_Curve;
 // APP
-export function App(monto,duracion) {
+export function App(monto,duracion,id) {
     // Import data
     cpMonto = monto;
     curva = ajuste.curve;
     period = createPeriods(duracion);
     ideal = idealCurve(period,curva,monto,duracion);
     s_Curve = s_curve(ideal);
-    s_Curve.forEach(e =>{
-        console.log(e)
-    })
-    return [s_Curve, ideal];
+    return [s_Curve, ideal,id];
 }
 
 
